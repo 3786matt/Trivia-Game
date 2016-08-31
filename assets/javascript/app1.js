@@ -18,36 +18,13 @@ var stopwatch = {
 			console.log('decrement timer ', stopwatch.time);
 		},
 		stop: function(){
-			// if(stopwatch.time=0) {
+			if(time=0){
 				clearInterval(counter);
-				$('#header').text('Game Over!');
-				$('.qs').fadeOut();
-				// clearTimeout(stopwatch);
-				// ('#timer').hide();
-				// alert('game over');
+
 
 				// $('#timer').html('Game Over!');
 				// $('.qs').hide();
-			},
-
-};
-
-
-	// 	$('#timer').text===0 function()
-	// {
-	// 	stopwatch.stop();
-	// };
-
-			// if(stopwatch.time==0) {
-			// 	clearInterval(counter);
-			// 	$('#header').text('Game Over!');
-			// 	$('.qs').fadeOut();
-
-			// }
-
-			// else{
-			// 	alert('continue');
-			// }
+			}
 			// stop the countdown
 
 
@@ -55,33 +32,13 @@ var stopwatch = {
 
 
 			// end game (based on object?)
-
-// 	check: function() {
-// 	if(stopwatch.time=0) {
-// 		stopwatch.stop();
-// 	};
-// 	else{
-// 		alert('game over');
-// 	};
-// };
-// 		}
-// 	// }
-
-// check();
+		},
+	}
 
 
 $(document).ready(function(){
 
-// function check() {
-// 	if(stopwatch.time <1) {
-// 		stopwatch.stop();
-// 	}
-	// else() {
-	// 	break;
-	// }
-// };
 
-// check();
 
 	var wins=0;
 	var losses=0;
@@ -92,26 +49,25 @@ $(document).ready(function(){
 		$('.qs').hide();
 		$('#score').hide();
 		$('#timer').hide();
-		$('#done').hide();
-		$('#q').hide();
+		$('#button2').hide();
 
 	};
 
 	hide();
 
-	$('#start').on("click", function() {
+	$('#button1').on("click", function() {
 		$('#start').hide();
-		$('.qs').show();
+		$('#q1').show();
 		$('#timer').show();
-		$('#done').show();
-		$('#q').show();
+		$('#button2').show();
 		stopwatch.start();
 
 	});
 
-	
 
-	$('#done').on('click', function(){
+
+
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp']:checked").val();
 
@@ -126,7 +82,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp1']:checked").val();
 
@@ -140,7 +96,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp2']:checked").val();
 
@@ -155,7 +111,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp3']:checked").val();
 
@@ -170,7 +126,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp4']:checked").val();
 
@@ -185,7 +141,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp5']:checked").val();
 
@@ -200,7 +156,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp6']:checked").val();
 
@@ -215,7 +171,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp7']:checked").val();
 
@@ -230,7 +186,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp8']:checked").val();
 
@@ -244,7 +200,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp9']:checked").val();
 
@@ -258,7 +214,7 @@ $(document).ready(function(){
 
 
 	});
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp10']:checked").val();
 
@@ -272,7 +228,7 @@ $(document).ready(function(){
 
 	});
 
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 	var answer  = $("input[name='inp11']:checked").val();
 
@@ -290,14 +246,12 @@ $(document).ready(function(){
 	});
 
 	// build a game object, with game.wins, game.losses, game.end(), game.start()
-	$('#done').on('click', function(){
+	$('#button2').on('click', function(){
 
 		$('#score').show();
-		$('#done').hide();
 		$('#correct').html("Correct: " + wins);
 		$('#wrong').html("Incorrect: " + losses);
 		$('#unanswered').html("Unanswered: " + unanswered);
-		stopwatch.stop();
 
 		
 

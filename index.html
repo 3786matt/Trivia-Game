@@ -11,147 +11,135 @@
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </head>
-<body>
+	<body background="assets/images/world_map.jpg">
+		<!-- http://www.siwallpaperhd.com/world-map-background-wallpaper.html/world-map-background-wallpaper-2 -->
+
+	<div id="timer"></div>
+
+	<div id="header">Trivia Game!</div>
+
+	<div id="start">START</div>
 
 	<div id="display">
 		
-
-		<div id="header">Trivia Game!</div>
-
-
 		<div id="q">
 
-			<div id="start"><button id="button1">START</button></div>
+			<div id="score">
 
-			<div id="q1" class="qs">
-				What is the capital of the United States?<br>
-				<input type="radio" class="correct" name="inp" value="true">Washington D.C.
-				<input type="radio" class="incorrect" name="inp" value="fasle">New York City
-				<input type="radio" class="incorrect" name="inp" value="false">Los Angeles
-				<input type="radio" class="incorrect" name="inp" value="false">Chicago
+				<div id="correct">Correct: </div>
+				<div id="wrong">Wrong: </div>	
+				<div id="unanswered">Unanswered: </div>
+
 			</div>
 
-			<div id="q2" class="qs">
-				What is the capital of the United Kingdom?<br>
-				<input type="radio" class="incorrect" name="inp1" value="false">Birmingham
-				<input type="radio" class="incorrect" name="inp1" value="fasle">Manchester
-				<input type="radio" class="correct" name="inp1" value="true">London
-				<input type="radio" class="incorrect" name="inp1" value="false">Leeds
-			</div>
+			<div id="left">
 
-			<div id="q3" class="qs">
-				What is the capital of France?<br>
-				<input type="radio" class="incorrect" name="inp2" value="false">Nice
-				<input type="radio" class="correct" name="inp2" value="true">Paris
-				<input type="radio" class="incorrect" name="inp2" value="false">Marseille
-				<input type="radio" class="incorrect" name="inp2" value="false">Toulouse
-			</div>
+				<div id="q1" class="qs">
+					What is the capital of the United States?<br>
+					<input type="radio" class="correct" name="inp" value="Washington D.C.">Washington D.C.
+						<input type="radio" class="incorrect" name="inp" value="fasle">New York City
+						<input type="radio" class="incorrect" name="inp" value="false">Los Angeles
+					<input type="radio" class="incorrect" name="inp" value="false">Chicago
+				</div>
 
-			<div id="q4" class="qs">
-				What is the capital of China?<br>
-				<input type="radio" class="incorrect" name="inp3" value="false">Guangzhou
-				<input type="radio" class="incorrect" name="inp3" value="fasle">Shanghai
-				<input type="radio" class="incorrect" name="inp3" value="false">Tianjin
-				<input type="radio" class="correct" name="inp3" value="true">Beijing
-			</div>
+				<div id="q2" class="qs">
+					What is the capital of the United Kingdom?<br>
+					<input type="radio" class="incorrect" name="inp1" value="false">Birmingham
+						<input type="radio" class="incorrect" name="inp1" value="fasle">Manchester
+						<input type="radio" class="correct" name="inp1" value="London">London
+					<input type="radio" class="incorrect" name="inp1" value="false">Leeds
+				</div>
 
-			<div id="q5" class="qs">
-				What is the capital of India?<br>
-				<input type="radio" class="incorrect" name="inp4" value="false">Mumbai
-				<input type="radio" class="incorrect" name="inp4" value="fasle">Kolkata
-				<input type="radio" class="correct" name="inp4" value="true">New Delhi
-				<input type="radio" class="incorrect" name="inp4" value="false">Bangalore
-			</div>
+				<div id="q3" class="qs">
+					What is the capital of France?<br>
+					<input type="radio" class="incorrect" name="inp2" value="false">Nice
+						<input type="radio" class="correct" name="inp2" value="Paris">Paris
+						<input type="radio" class="incorrect" name="inp2" value="false">Marseille
+					<input type="radio" class="incorrect" name="inp2" value="false">Toulouse
+				</div>
+
+				<div id="q4" class="qs">
+					What is the capital of China?<br>
+					<input type="radio" class="incorrect" name="inp3" value="false">Guangzhou
+						<input type="radio" class="incorrect" name="inp3" value="fasle">Shanghai
+						<input type="radio" class="incorrect" name="inp3" value="false">Tianjin
+					<input type="radio" class="correct" name="inp3" value="Beijing">Beijing
+				</div>
+
+				<div id="q5" class="qs">
+					What is the capital of India?<br>
+					<input type="radio" class="incorrect" name="inp4" value="false">Mumbai
+						<input type="radio" class="incorrect" name="inp4" value="fasle">Kolkata
+						<input type="radio" class="correct" name="inp4" value="New Delhi">New Delhi
+					<input type="radio" class="incorrect" name="inp4" value="false">Bangalore
+				</div>
 			
-			<div id="q6" class="qs">
-				What is the capital Indonesia?<br>
-				<input type="radio" class="incorrect" name="inp5" value="false">Surabaya
-				<input type="radio" class="correct" name="inp5" value="true">Jakarta
-				<input type="radio" class="incorrect" name="inp5" value="false">Bekasi
-				<input type="radio" class="incorrect" name="inp5" value="false">Bogor
+				<div id="q6" class="qs">
+					What is the capital Indonesia?<br>
+					<input type="radio" class="incorrect" name="inp5" value="false">Surabaya
+						<input type="radio" class="correct" name="inp5" value="Jakarta">Jakarta
+						<input type="radio" class="incorrect" name="inp5" value="false">Bekasi
+					<input type="radio" class="incorrect" name="inp5" value="false">Bogor
+				</div>
+
 			</div>
 
-			<div id="q7" class="qs">
-				What is the capital of Myanmar?<br>
-				<input type="radio" class="incorrect" name="inp6" value="false">Yangon
-				<input type="radio" class="incorrect" name="inp6" value="fasle">Bago
-				<input type="radio" class="correct" name="inp6" value="true">Naypyidaw
-				<input type="radio" class="incorrect" name="inp6" value="false">Mandalay
-			</div>
+			<div id="right">
 
-			<div id="q8" class="qs">
-				What is the capital of Russia?<br>
-				<input type="radio" class="correct" name="inp7" value="true">Moscow
-				<input type="radio" class="incorrect" name="inp7" value="fasle">Saint Petersburg
-				<input type="radio" class="incorrect" name="inp7" value="false">Yekaterinburg
-				<input type="radio" class="incorrect" name="inp7" value="false">Volgograd
-			</div>
+				<div id="q7" class="qs">
+					What is the capital of Myanmar?<br>
+					<input type="radio" class="incorrect" name="inp6" value="false">Yangon
+						<input type="radio" class="incorrect" name="inp6" value="fasle">Bago
+						<input type="radio" class="correct" name="inp6" value="Naypyidaw">Naypyidaw
+					<input type="radio" class="incorrect" name="inp6" value="false">Mandalay
+				</div>
 
-			<div id="q9" class="qs">
-				What is the capital of Nigeria?<br>
-				<input type="radio" class="incorrect" name="inp8" value="false">Lagos
-				<input type="radio" class="correct" name="inp8" value="true">Abuja
-				<input type="radio" class="incorrect" name="inp8" value="false">Kano
-				<input type="radio" class="incorrect" name="inp8" value="false">Maiduguri
-			</div>
+				<div id="q8" class="qs">
+					What is the capital of Russia?<br>
+					<input type="radio" class="correct" name="inp7" value="Moscow">Moscow
+						<input type="radio" class="incorrect" name="inp7" value="fasle">Saint Petersburg
+						<input type="radio" class="incorrect" name="inp7" value="false">Yekaterinburg
+					<input type="radio" class="incorrect" name="inp7" value="false">Volgograd
+				</div>
 
-			<div id="q10" class="qs">
-				What is the capital of Turkey?<br>
-				<input type="radio" class="incorrect" name="inp9" value="false">Istanbul
-				<input type="radio" class="incorrect" name="inp9" value="fasle">Diyarbakir
-				<input type="radio" class="incorrect" name="inp9" value="false">Gaziantep
-				<input type="radio" class="correct" name="inp9" value="true">Ankara
-			</div>
+				<div id="q9" class="qs">
+					What is the capital of Nigeria?<br>
+					<input type="radio" class="incorrect" name="inp8" value="false">Lagos
+						<input type="radio" class="correct" name="inp8" value="Abuja">Abuja
+						<input type="radio" class="incorrect" name="inp8" value="false">Kano
+					<input type="radio" class="incorrect" name="inp8" value="false">Maiduguri
+				</div>
 
-			<div id="q11" class="qs">
-				What is the capital of Egypt?<br>
-				<input type="radio" class="incorrect" name="inp10" value="false">Port Said
-				<input type="radio" class="incorrect" name="inp10" value="fasle">Alexandria
-				<input type="radio" class="correct" name="inp10" value="true">Cairo
-				<input type="radio" class="incorrect" name="inp10" value="false">Suez
-			</div>
+				<div id="q10" class="qs">
+					What is the capital of Turkey?<br>
+					<input type="radio" class="incorrect" name="inp9" value="false">Istanbul
+						<input type="radio" class="incorrect" name="inp9" value="fasle">Diyarbakir
+						<input type="radio" class="incorrect" name="inp9" value="false">Gaziantep
+					<input type="radio" class="correct" name="inp9" value="Ankara">Ankara
+				</div>
 
-			<div id="q12" class="qs">
-				What is the capital of Brazil?<br>
-				<input type="radio" class="incorrect" name="inp11" value="true">Brasilia
-				<input type="radio" class="incorrect" name="inp11" value="fasle">Sao Paulo
-				<input type="radio" class="correct" name="inp11" value="false">Rio de Janeiro
-				<input type="radio" class="incorrect" name="inp11" value="false">Recife
-			</div>
+				<div id="q11" class="qs">
+					What is the capital of Egypt?<br>
+					<input type="radio" class="incorrect" name="inp10" value="false">Port Said
+						<input type="radio" class="incorrect" name="inp10" value="fasle">Alexandria
+						<input type="radio" class="correct" name="inp10" value="Cairo">Cairo
+					<input type="radio" class="incorrect" name="inp10" value="false">Suez
+				</div>
 
+				<div id="q12" class="qs">
+					What is the capital of Brazil?<br>
+					<input type="radio" class="incorrect" name="inp11" value="Brasilia">Brasilia
+						<input type="radio" class="incorrect" name="inp11" value="fasle">Sao Paulo
+						<input type="radio" class="correct" name="inp11" value="false">Rio de Janeiro
+					<input type="radio" class="incorrect" name="inp11" value="false">Recife
+				</div>
+
+			</div>
 
 		</div>
 
-		<div id="done"><button id="button2">DONE</button></div>
-
-		<div id="score">
-
-			<div id="correct">Correct: </div>
-			<div id="wrong">Wrong: </div>	
-			<div id="unanswered">Unanswered: </div>
+			<div id="done">DONE</div>
 
 		</div>
-
-	</div>
-
-<!-- 
-onclick="tally()" -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
+	</body>
 </html>
