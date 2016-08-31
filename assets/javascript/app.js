@@ -1,6 +1,10 @@
 
-var stopwatch = {
-		time:120,
+
+
+$(document).ready(function() {
+
+	var stopwatch = {
+		time:100,
 		
 		start: function() {
 			counter = setInterval(stopwatch.decrement, 1000);
@@ -15,18 +19,7 @@ var stopwatch = {
 
 				console.log('decrement timer ', stopwatch.time);
 			} else {
-				// var score1 function() {
-				// 	if(".correct"=true){
-				// 		wins++;
-				// 	}
-
-				// 	else if(".incorrect"=true){
-				// 		losses++;
-				// 	}
-				// 	else{
-				// 		unanswered++;
-				// 	}
-				// };
+			
 				stopwatch.stop();
 				$('#score').show();
 				$('#done').hide();
@@ -35,15 +28,12 @@ var stopwatch = {
 
 		stop: function(){
 				clearInterval(counter);
-				// $('#score').html("Correct: " + wins <br> "Incorrect: " + losses <br> "Unanswered: " +unanswered);
 				$('#header').text('Game Over!');
 				$('.qs').fadeOut();
-				
+				tallyAnswers();
 			},
 
 		};
-
-$(document).ready(function() {
 
 	var wins=0;
 	var losses=0;
@@ -71,9 +61,15 @@ $(document).ready(function() {
 		stopwatch.start();
 
 	});
-	
 
-	$('#done').on('click', function(){
+		
+$('#done').on('click', function(event){
+	tallyAnswers();
+	});
+
+
+function tallyAnswers(){
+		console.log('tallyAnswers');
 
 	var answer  = $("input[name='inp']:checked").val();
 
@@ -85,11 +81,6 @@ $(document).ready(function() {
 		losses++;
 	}
 
-
-	});
-
-	$('#done').on('click', function(){
-
 	var answer  = $("input[name='inp1']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -99,10 +90,6 @@ $(document).ready(function() {
 	} else {
 		losses++;
 	}
-
-	});
-
-	$('#done').on('click', function(){
 
 	var answer  = $("input[name='inp2']:checked").val();
 
@@ -114,11 +101,6 @@ $(document).ready(function() {
 		losses++;
 	}
 
-
-	});
-
-	$('#done').on('click', function(){
-
 	var answer  = $("input[name='inp3']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -128,11 +110,6 @@ $(document).ready(function() {
 	} else {
 		losses++;
 	}
-
-
-	});
-
-	$('#done').on('click', function(){
 
 	var answer  = $("input[name='inp4']:checked").val();
 
@@ -144,11 +121,6 @@ $(document).ready(function() {
 		losses++;
 	}
 
-
-	});
-
-	$('#done').on('click', function(){
-
 	var answer  = $("input[name='inp5']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -158,11 +130,6 @@ $(document).ready(function() {
 	} else {
 		losses++;
 	}
-
-
-	});
-
-	$('#done').on('click', function(){
 
 	var answer  = $("input[name='inp6']:checked").val();
 
@@ -174,11 +141,6 @@ $(document).ready(function() {
 		losses++;
 	}
 
-
-	});
-
-	$('#done').on('click', function(){
-
 	var answer  = $("input[name='inp7']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -188,11 +150,6 @@ $(document).ready(function() {
 	} else {
 		losses++;
 	}
-
-
-	});
-
-	$('#done').on('click', function(){
 
 	var answer  = $("input[name='inp8']:checked").val();
 
@@ -204,10 +161,7 @@ $(document).ready(function() {
 		losses++;
 	}
 
-	});
-
-	$('#done').on('click', function(){
-
+	
 	var answer  = $("input[name='inp9']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -219,9 +173,6 @@ $(document).ready(function() {
 	}
 
 
-	});
-	$('#done').on('click', function(){
-
 	var answer  = $("input[name='inp10']:checked").val();
 
 	if(typeof answer == "undefined") {
@@ -232,9 +183,6 @@ $(document).ready(function() {
 		losses++;
 	}
 
-	});
-
-	$('#done').on('click', function(){
 
 	var answer  = $("input[name='inp11']:checked").val();
 
@@ -245,27 +193,24 @@ $(document).ready(function() {
 	} else {
 		losses++;
 	}
+
+
 	console.log("w:"+wins);
 	console.log("l:"+losses);
 	console.log("u:"+unanswered);
 
-	});
-
-	// build a game object, with game.wins, game.losses, game.end(), game.start()
-	$('#done').on('click', function(){
-
-		$('#score').show();
+		$('#score').fadeIn();
 		$('#done').hide();
 		$('#correct').html("Correct: " + wins);
 		$('#wrong').html("Incorrect: " + losses);
 		$('#unanswered').html("Unanswered: " + unanswered);
-		// $('#bonus').html("Time Bonus: +2");
-		stopwatch.stop();
+		$('.qs').fadeOut();
+		clearInterval(counter);
+		$('#header').text('Game Over!');
+		
 		
 
-		
-
-	});
+	}
 });
 
 
