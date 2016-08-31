@@ -78,6 +78,7 @@
 	
 }
 
+
 #q {
 	width: 1375px;
 	height: 780px;
@@ -111,6 +112,7 @@
 	font-style: bold;
 	/*background: rgba(215, 148, 85, .70);*/
 	background: transparent;
+	/*display: block;*/
 
 }
 #start {

@@ -15,6 +15,18 @@ var stopwatch = {
 
 				console.log('decrement timer ', stopwatch.time);
 			} else {
+				// var score1 function() {
+				// 	if(".correct"=true){
+				// 		wins++;
+				// 	}
+
+				// 	else if(".incorrect"=true){
+				// 		losses++;
+				// 	}
+				// 	else{
+				// 		unanswered++;
+				// 	}
+				// };
 				stopwatch.stop();
 				$('#score').show();
 				$('#done').hide();
@@ -23,6 +35,7 @@ var stopwatch = {
 
 		stop: function(){
 				clearInterval(counter);
+				// $('#score').html("Correct: " + wins <br> "Incorrect: " + losses <br> "Unanswered: " +unanswered);
 				$('#header').text('Game Over!');
 				$('.qs').fadeOut();
 				
@@ -58,7 +71,6 @@ $(document).ready(function() {
 		stopwatch.start();
 
 	});
-
 	
 
 	$('#done').on('click', function(){
