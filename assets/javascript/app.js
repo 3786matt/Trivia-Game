@@ -1,87 +1,36 @@
 
 var stopwatch = {
-		time:5,
-		// sec:0,
+		time:120,
+		
 		start: function() {
-			// display startime in div
-
-			// every second decrement 
 			counter = setInterval(stopwatch.decrement, 1000);
 			console.log('lookie ere', stopwatch.time);
+		},
 
-			// display "new time" in div
-			
-		},
 		decrement: function() {
-			stopwatch.time --;
-			$('#timer').text(stopwatch.time);
-			console.log('decrement timer ', stopwatch.time);
+			if(stopwatch.time > 0) {
+				stopwatch.time--;
+
+				$('#timer').text(stopwatch.time);
+
+				console.log('decrement timer ', stopwatch.time);
+			} else {
+				stopwatch.stop();
+				$('#score').show();
+				$('#done').hide();
+			}
 		},
+
 		stop: function(){
-			// if(stopwatch.time=0) {
 				clearInterval(counter);
 				$('#header').text('Game Over!');
 				$('.qs').fadeOut();
-				// clearTimeout(stopwatch);
-				// ('#timer').hide();
-				// alert('game over');
-
-				// $('#timer').html('Game Over!');
-				// $('.qs').hide();
+				
 			},
 
-};
+		};
 
-
-	// 	$('#timer').text===0 function()
-	// {
-	// 	stopwatch.stop();
-	// };
-
-			// if(stopwatch.time==0) {
-			// 	clearInterval(counter);
-			// 	$('#header').text('Game Over!');
-			// 	$('.qs').fadeOut();
-
-			// }
-
-			// else{
-			// 	alert('continue');
-			// }
-			// stop the countdown
-
-
-			// alert that time is down
-
-
-			// end game (based on object?)
-
-// 	check: function() {
-// 	if(stopwatch.time=0) {
-// 		stopwatch.stop();
-// 	};
-// 	else{
-// 		alert('game over');
-// 	};
-// };
-// 		}
-// 	// }
-
-// check();
-
-
-$(document).ready(function(){
-
-// function check() {
-// 	if(stopwatch.time <1) {
-// 		stopwatch.stop();
-// 	}
-	// else() {
-	// 	break;
-	// }
-// };
-
-// check();
+$(document).ready(function() {
 
 	var wins=0;
 	var losses=0;
@@ -94,6 +43,7 @@ $(document).ready(function(){
 		$('#timer').hide();
 		$('#done').hide();
 		$('#q').hide();
+		$('#bonus').hide();
 
 	};
 
@@ -297,53 +247,13 @@ $(document).ready(function(){
 		$('#correct').html("Correct: " + wins);
 		$('#wrong').html("Incorrect: " + losses);
 		$('#unanswered').html("Unanswered: " + unanswered);
+		// $('#bonus').html("Time Bonus: +2");
 		stopwatch.stop();
+		
 
 		
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-// console.log(wins);
-// console.log(losses);
-// console.log(unanswered);
-
-
-
-
-
-
-
-
 });
 
 
